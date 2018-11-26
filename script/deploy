@@ -1,0 +1,7 @@
+ssh -i "/home/jenkins/pem/blemediasolution.pem" tiecoin@ec2-18-218-128-190.us-east-2.compute.amazonaws.com <<EOF
+ cd /home/tiecoin/public_html/github-test
+ git pull
+ npm install — production
+ pm2 restart index.js
+ exit
+EOF
